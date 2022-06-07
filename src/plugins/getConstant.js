@@ -1,6 +1,4 @@
-const constants = {
-  SplashMessage: "Welcome to my page",
-};
+import constants from "@/assets/constants";
 
 export default {
   install: (app) => {
