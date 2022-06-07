@@ -1,5 +1,3 @@
-const constants = {
-  SplashMessage: "Welcome to my page",
-};
-
-export default constants;
+export default Object.freeze({
+  HEXAGON_ICON_TEXT: "JZ",
+});
