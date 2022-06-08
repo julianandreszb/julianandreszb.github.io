@@ -7,7 +7,11 @@ import IconHexagon from "@/components/icons/IconHexagon.vue";
 describe("IconHexagon", () => {
   it("renders properly", () => {
     expect(IconHexagon).toBeTruthy();
-    const wrapper = mount(IconHexagon);
+    const wrapper = mount(IconHexagon, {
+      props: {
+        msg: constants.HEXAGON_ICON_TEXT,
+      },
+    });
     expect(wrapper.find("#hexagon tspan").text()).toContain(
       constants.HEXAGON_ICON_TEXT
     );
