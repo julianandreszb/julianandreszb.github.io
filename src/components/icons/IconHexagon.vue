@@ -2,6 +2,13 @@
 import { onMounted } from "vue";
 import anime from "animejs";
 
+defineProps({
+  msg: {
+    type: String,
+    required: true,
+  },
+});
+
 onMounted(() => {
   const anim = anime.timeline({
     loop: true,
@@ -29,7 +36,7 @@ onMounted(() => {
 
 <template>
   <svg
-    width="50"
+    width="100%"
     id="hexagon"
     viewBox="0 0 100 100"
     fill="none"
@@ -47,7 +54,7 @@ onMounted(() => {
       >
         <text>
           <tspan class="font-sans" x="-16" y="33">
-            {{ $getConstant("HexagonIconMessage") }}
+            {{ msg }}
           </tspan>
         </text>
       </g>
