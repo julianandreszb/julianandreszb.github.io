@@ -1,5 +1,4 @@
 import { describe, it, expect } from "vitest";
-
 import { mount } from "@vue/test-utils";
 import SplashBackdrop from "../SplashBackdrop.vue";
 import IconHexagon from "../icons/IconHexagon.vue";
