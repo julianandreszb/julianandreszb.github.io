@@ -2,35 +2,47 @@
 import { onMounted } from "vue";
 import anime from "animejs";
 
-defineProps({
+const props = defineProps({
   msg: {
     type: String,
     required: true,
   },
+  enableAnimation: {
+    type: Boolean,
+    default: true,
+  },
 });
 
 onMounted(() => {
-  const anim = anime.timeline({
-    loop: true,
-    direction: "alternate",
-  });
-
-  anim
-    .add({
-      targets: "#hexagon path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeInOutQuart",
-      duration: 2000,
-      delay: function (el, i) {
-        return i * 250;
-      },
-    })
-    .add({
+  if (props.enableAnimation) {
+    anime
+      .timeline({
+        loop: true,
+        direction: "alternate",
+      })
+      .add({
+        targets: "#hexagon path",
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: "easeInOutQuart",
+        duration: 2000,
+        delay: function (el, i) {
+          return i * 250;
+        },
+      })
+      .add({
+        targets: "#hexagon #B",
+        duration: 1000,
+        opacity: 1,
+        easing: "easeInOutQuart",
+      });
+  } else {
+    anime({
       targets: "#hexagon #B",
       duration: 1000,
       opacity: 1,
       easing: "easeInOutQuart",
     });
+  }
 });
 </script>
 
