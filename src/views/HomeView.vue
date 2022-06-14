@@ -3,12 +3,12 @@ import SplashBackdrop from "@/components/SplashBackdrop.vue";
 import { ref, onMounted } from "vue";
 import NavBar from "@/components/NavBar.vue";
 
-let isPageLoading = ref(true);
+const isPageLoading = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
     isPageLoading.value = false;
-  }, 4000);
+  }, 3200);
 });
 </script>
 
