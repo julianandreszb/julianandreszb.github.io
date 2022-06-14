@@ -65,7 +65,7 @@ onMounted(() => {
         letter-spacing="4.16666603"
       >
         <text>
-          <tspan x="-10" y="33">
+          <tspan x="-18" y="33">
             {{ msg }}
           </tspan>
         </text>

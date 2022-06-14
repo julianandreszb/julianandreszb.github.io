@@ -8,15 +8,18 @@ const navStore = useNavStore();
 </script>
 
 <template>
-  <header class="">
-    <nav class="w-screen flex justify-between items-center bg-dark-blue">
+  <header>
+    <nav
+      class="h-full w-screen flex justify-between items-center bg-dark-blue px-4"
+    >
       <IconHexagon
-        class="w-14"
+        class="w-11"
         :msg="constants.HEXAGON_ICON_TEXT"
         :enable-animation="false"
       />
       <div class="w-full h-full flex justify-end gap-0.5 items-center">
         <NavBarItem
+          class="border-b-2 border-b-emerald-400 text-emerald-400"
           :class="navStore.navBarItemClass"
           data-test="nav-bar-item-about"
           :msg="constants.NAVBAR_ITEM_ABOUT_TEXT"
