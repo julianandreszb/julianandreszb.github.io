@@ -60,12 +60,12 @@ onMounted(() => {
         transform="translate(36, 33)"
         fill="#64FFDA"
         style="opacity: 0"
-        font-size="50"
+        font-size="40"
         font-weight="400"
         letter-spacing="4.16666603"
       >
         <text>
-          <tspan x="-18" y="33">
+          <tspan x="-12" y="33">
             {{ msg }}
           </tspan>
         </text>

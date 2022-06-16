@@ -1,15 +1,16 @@
 <script setup>
 import { RouterView } from "vue-router";
-import SplashBackdrop from "@/components/SplashBackdrop.vue";
 import { ref, onMounted } from "vue";
+import SplashBackdrop from "@/components/SplashBackdrop.vue";
 import NavBar from "@/components/NavBar.vue";
+import IconHexagon from "@/components/icons/IconHexagon.vue";
+import constants from "@/assets/constants";
 
 let isPageLoading = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
     isPageLoading.value = false;
-    this.$router.replace("");
   }, 3200);
 });
 </script>
@@ -18,19 +19,34 @@ onMounted(() => {
   <SplashBackdrop v-if="isPageLoading" />
   <main
     v-if="!isPageLoading"
-    class="h-full grid grid-cols-[4rem_8fr_4rem] grid-rows-[3.5rem_auto_2rem]"
+    class="h-full grid grid-cols-[4rem_8fr_4rem] grid-rows-[6rem_auto_2rem]"
   >
-    <NavBar class="bg-blue-500 col-span-3" />
-    <div class="bg-dark-blue" data-test="nav-left-social-media" />
-    <div class="bg-dark-blue" data-test="container">
+    <!-- Begin header section   -->
+    <div class="bg-dark-blue flex justify-center">
+      <IconHexagon
+        class="w-11"
+        :msg="constants.HEXAGON_ICON_TEXT"
+        :enable-animation="false"
+      />
+    </div>
+    <NavBar></NavBar>
+    <div class="bg-dark-blue"></div>
+    <!-- End header section  -->
+
+    <!-- Begin content section  -->
+    <div class="bg-dark-blue" />
+    <div class="bg-dark-blue">
       <RouterView />
     </div>
-    <div class="bg-dark-blue" data-test="nav-right-mailto" />
-    <div class="bg-dark-blue col-span-3" data-test="footer" />
+    <div class="bg-dark-blue" />
+    <!-- End content section  -->
+
+    <!-- Begin footer section  -->
+    <div class="bg-dark-blue col-span-3" />
+    <!-- End footer section  -->
   </main>
 </template>
 
 <style>
 @import "@/assets/base.css";
-/*@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");*/
 </style>

@@ -1,9 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
 import NavBar from "@/components/NavBar.vue";
-import IconHexagon from "@/components/icons/IconHexagon.vue";
 import constants from "@/assets/constants";
-
 import { createTestingPinia } from "@pinia/testing";
 
 describe("NavBar", () => {
@@ -18,7 +16,6 @@ describe("NavBar", () => {
         ],
       },
     });
-    expect(wrapper.findComponent(IconHexagon).exists()).toBe(true);
 
     const navBarItemAbout = wrapper.get('[data-test="nav-bar-item-about"]');
     expect(navBarItemAbout.text()).toBe(constants.NAVBAR_ITEM_ABOUT_TEXT);

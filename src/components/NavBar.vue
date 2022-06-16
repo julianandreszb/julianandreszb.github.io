@@ -1,5 +1,4 @@
 <script setup>
-import IconHexagon from "@/components/icons/IconHexagon.vue";
 import constants from "@/assets/constants";
 import NavBarItem from "@/components/NavBarItem.vue";
 import { useNavStore } from "@/stores/navStore";
@@ -9,27 +8,22 @@ const navStore = useNavStore();
 
 <template>
   <header>
-    <nav
-      class="h-full w-screen flex justify-between items-center bg-dark-blue px-4"
-    >
-      <IconHexagon
-        class="w-11"
-        :msg="constants.HEXAGON_ICON_TEXT"
-        :enable-animation="false"
-      />
-      <div class="w-full h-full flex justify-end gap-0.5 items-center">
+    <nav class="h-full w-full flex justify-between items-center bg-dark-blue">
+      <div class="w-full h-full flex justify-end items-center">
         <NavBarItem
-          class="border-b-2 border-b-emerald-400 text-emerald-400"
+          class="nav-bar-item border-b-2 border-b-emerald-400 text-emerald-400"
           :class="navStore.navBarItemClass"
           data-test="nav-bar-item-about"
           :msg="constants.NAVBAR_ITEM_ABOUT_TEXT"
         />
         <NavBarItem
+          class="nav-bar-item"
           :class="navStore.navBarItemClass"
           data-test="nav-bar-item-portfolio"
           :msg="constants.NAVBAR_ITEM_PORTFOLIO_TEXT"
         />
         <NavBarItem
+          class="nav-bar-item"
           :class="navStore.navBarItemClass"
           data-test="nav-bar-item-contact"
           :msg="constants.NAVBAR_ITEM_CONTACT_TEXT"
@@ -39,4 +33,14 @@ const navStore = useNavStore();
   </header>
 </template>
 
-<style scoped></style>
+<style scoped>
+nav > div {
+  counter-reset: item;
+}
+
+.nav-bar-item::before {
+  counter-increment: item;
+  content: "0" counter(item) ". ";
+  color: #34d399ff;
+}
+</style>
