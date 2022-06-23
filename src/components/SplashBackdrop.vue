@@ -5,7 +5,7 @@ import constants from "@/assets/constants";
 
 <template>
   <div class="w-screen h-screen bg-dark-blue flex justify-center items-center">
-    <div class="w-1/12">
+    <div class="w-2/12 sm:w-1/12">
       <IconHexagon :msg="constants.HEXAGON_ICON_TEXT" />
     </div>
   </div>

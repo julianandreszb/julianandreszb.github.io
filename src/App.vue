@@ -1,50 +1,61 @@
 <script setup>
 import { RouterView } from "vue-router";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import SplashBackdrop from "@/components/SplashBackdrop.vue";
+import SplashBackdropMenu from "@/components/SplashBackdropMenu.vue";
 import NavBar from "@/components/NavBar.vue";
-import IconHexagon from "@/components/icons/IconHexagon.vue";
-import constants from "@/assets/constants";
 
 let isPageLoading = ref(true);
+let isBackDropMenuOpen = ref(false);
+
+function resize(event) {
+  if (isBackDropMenuOpen.value && event.target.innerWidth >= 770) {
+    toggleBackdropMenu();
+  }
+}
+function toggleBackdropMenu() {
+  isBackDropMenuOpen.value = !isBackDropMenuOpen.value;
+  document.body.classList.toggle("overflow-hidden");
+}
 
 onMounted(() => {
   setTimeout(() => {
     isPageLoading.value = false;
   }, 3200);
+
+  window.addEventListener("resize", resize);
+});
+onUnmounted(() => {
+  window.removeEventListener("resize", resize);
 });
 </script>
 
 <template>
-  <SplashBackdrop v-if="isPageLoading" />
-  <main
-    v-if="!isPageLoading"
-    class="h-full grid grid-cols-[4rem_8fr_4rem] grid-rows-[6rem_auto_2rem]"
-  >
-    <!-- Begin header section   -->
-    <div class="bg-dark-blue flex justify-center">
-      <IconHexagon
-        class="w-11"
-        :msg="constants.HEXAGON_ICON_TEXT"
-        :enable-animation="false"
-      />
-    </div>
-    <NavBar></NavBar>
-    <div class="bg-dark-blue"></div>
-    <!-- End header section  -->
+  <SplashBackdropMenu
+    v-if="isBackDropMenuOpen"
+    @click="toggleBackdropMenu"
+    class="cursor-pointer"
+  />
+  <div id="aboutMe" class="h-full relative">
+    <SplashBackdrop v-if="isPageLoading" />
+    <main v-if="!isPageLoading" class="h-full relative">
+      <!-- Begin header section   -->
+      <div class="h-[4rem] fixed bg-dark-blue-alpha drop-shadow-xl">
+        <NavBar @toggle-backdrop-menu="toggleBackdropMenu"></NavBar>
+      </div>
+      <!-- End header section  -->
 
-    <!-- Begin content section  -->
-    <div class="bg-dark-blue" />
-    <div class="bg-dark-blue">
-      <RouterView />
-    </div>
-    <div class="bg-dark-blue" />
-    <!-- End content section  -->
+      <div class="h-full grid grid-cols-1 grid-rows-[4rem_auto]">
+        <div class="bg-dark-blue"></div>
 
-    <!-- Begin footer section  -->
-    <div class="bg-dark-blue col-span-3" />
-    <!-- End footer section  -->
-  </main>
+        <!-- Begin content section  -->
+        <div class="bg-dark-blue">
+          <RouterView :class="isBackDropMenuOpen ? 'blur-sm' : ''" />
+        </div>
+        <!-- End content section  -->
+      </div>
+    </main>
+  </div>
 </template>
 
 <style>

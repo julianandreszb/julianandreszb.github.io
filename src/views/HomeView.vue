@@ -1,35 +1,51 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col gap-y-5 pl-40 pt-20">
-    <div
-      class="flex flex-col gap-y-7 text-6xl tracking-wide"
-      data-test="greeting"
-    >
-      <p class="text-lg text-green-cyan tracking-widest">Hi, my name is</p>
-      <p class="text-gray-custom-100 font-bold">Julian Zapata,</p>
-      <p class="text-gray-custom-400 font-bold">
-        I'm a Full-Stack web developer
-      </p>
-    </div>
-    <div data-test="description">
-      <p class="text-xl text-gray-custom-400">
-        I love coding, learning new web technologies, and improving my skills
-        every day.
-      </p>
-      <p class="text-xl text-gray-custom-400">
-        Currently, I’m focused on getting a master in JavaScript and VueJS.
-      </p>
-    </div>
-    <div data-test="farewell">
-      <p class="text-xl text-gray-custom-400">
-        Please check out my
-        <span
-          class="text-green-cyan border-b-2 border-b-green-cyan cursor-pointer"
-          >Portfolio (In progress)</span
+  <div class="flex flex-col px-8 py-6 sm:px-8 sm:py-6 md:py-5">
+    <div class="h-screen">
+      <div
+        class="flex flex-col gap-y-3 text-3xl sm:text-4xl md:text-5xl tracking-wide"
+        data-test="greeting"
+      >
+        <p
+          class="text-sm sm:text-base md:text-lg text-green-cyan tracking-widest"
         >
-        to see what I've built
-      </p>
+          Hi, my name is
+        </p>
+        <p class="text-gray-custom-100 font-bold">Julian Zapata,</p>
+        <p class="text-gray-custom-400 font-bold">
+          I'm a Full-Stack web developer
+        </p>
+      </div>
+      <div class="mt-2 sm:mt-3" data-test="description">
+        <p class="text-xl text-gray-custom-400 leading-relaxed sm:text-2xl">
+          I'm passionate about learning and improving every day. Currently, I’m
+          focused on getting a master in
+          <span class="bg-yellow-300 text-black rounded-md px-1 pt-0.5"
+            >JavaScript</span
+          >
+          and
+          <span class="bg-green-400 text-black rounded-md px-1 pt-0.5"
+            >VueJS</span
+          >.
+        </p>
+      </div>
+      <div data-test="farewell">
+        <p class="text-xl text-gray-custom-400 leading-relaxed sm:text-2xl">
+          Please check out my
+          <span
+            class="text-green-cyan border-b-2 border-b-green-cyan cursor-pointer"
+            >Portfolio (In progress)</span
+          >
+          to see what I've built
+        </p>
+      </div>
+    </div>
+    <div id="portfolio" class="h-screen bg-dark-blue pt-28">
+      <h1 class="text-3xl text-gray-custom-400">Portfolio</h1>
+    </div>
+    <div id="contact" class="h-screen bg-dark-blue pt-28">
+      <h1 class="text-3xl text-gray-custom-400">Contact</h1>
     </div>
   </div>
 </template>
