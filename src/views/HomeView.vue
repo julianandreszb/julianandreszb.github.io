@@ -1,7 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col px-8 py-6 sm:px-8 sm:py-6 md:py-5">
+  <div class="flex flex-col px-8 py-6 sm:px-16 sm:py-6 md:px-32 md:py-5">
+    <!-- Begin about me section -->
     <div class="h-screen">
       <div
         class="flex flex-col gap-y-3 text-3xl sm:text-4xl md:text-5xl tracking-wide"
@@ -41,11 +42,18 @@
         </p>
       </div>
     </div>
+    <!-- End about me section -->
+
+    <!-- Begin portfolio section -->
     <div id="portfolio" class="h-screen bg-dark-blue pt-28">
       <h1 class="text-3xl text-gray-custom-400">Portfolio</h1>
     </div>
+    <!-- End portfolio section -->
+
+    <!-- Begin contact section -->
     <div id="contact" class="h-screen bg-dark-blue pt-28">
       <h1 class="text-3xl text-gray-custom-400">Contact</h1>
     </div>
+    <!-- End contact section -->
   </div>
 </template>
