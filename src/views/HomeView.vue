@@ -54,27 +54,40 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
     <!-- End about me section -->
 
     <!-- Begin contact section -->
-    <div id="aboutMe" class="h-screen bg-dark-blue pt-28">
-      <h1 class="text-2xl font-bold text-gray-custom-100 mb-10">
-        <span class="text-green-cyan font-light text-xl">01.</span> About me
-      </h1>
-      <p class="text-gray-custom-400 mb-5">
-        Hi! My name is Julian Zapata and I have been in the world of web
-        development for about {{ totalWebDevelopmentExperience }} years. I
-        mainly work on the backend side using the PHP frameworks Zend and
-        Laravel(recently). Right now I'm mastering my Javascript, VueJS, and CSS
-        skills.
-      </p>
-      <p class="text-gray-custom-400 mb-5">
-        Finally, here are some of the most recent technologies I've used.
-      </p>
-      <ul class="text-gray-custom-400">
-        <li>CSS3 & Tailwind CSS</li>
-        <li>JavaScript (ES6+)</li>
-        <li>VueJS</li>
-        <li>PHP (Zend 1.7 & Laravel)</li>
-        <li>MySQL</li>
-      </ul>
+    <div
+      id="aboutMe"
+      class="h-screen bg-dark-blue pt-28 flex flex-col gap-y-10"
+    >
+      <div>
+        <h1 class="text-2xl font-bold text-gray-custom-100 mb-10">
+          <span class="text-green-cyan font-light text-xl">01.</span> About me
+        </h1>
+        <p class="text-gray-custom-400 mb-5">
+          Hi! My name is Julian Zapata and I have been in the world of web
+          development for about {{ totalWebDevelopmentExperience }} years. I
+          mainly work on the backend side using the PHP frameworks as Zend and
+          Laravel(recently). Right now I'm mastering my Javascript, VueJS, and
+          CSS skills.
+        </p>
+        <p class="text-gray-custom-400 mb-5">
+          Finally, here are some of the most recent technologies I've used.
+        </p>
+        <div class="flex gap-x-10">
+          <ul class="text-gray-custom-400">
+            <li class="ml-5 list-styled">PHP (Zend 1.7 & Laravel)</li>
+            <li class="ml-5 list-styled">JavaScript (ES6+)</li>
+            <li class="ml-5 list-styled">MySQL</li>
+          </ul>
+          <ul class="text-gray-custom-400">
+            <li class="ml-5 list-styled">CSS3 & Tailwind CSS</li>
+            <li class="ml-5 list-styled">JavaScript (ES6+)</li>
+            <li class="ml-5 list-styled">VueJS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex justify-center relative">
+        <img class="rounded h-3/6 bg-white" src="/profile-2.png" alt="" />
+      </div>
     </div>
     <!-- End contact section -->
 
@@ -88,7 +101,7 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
           class="md:hidden custom-box-shadow w-full h-80 drop-shadow-xl relative"
         >
           <div class="rounded bg-project-image-backdrop"></div>
-          <div class="rounded bg-project-image bg-[url('/img.png')]"></div>
+          <div class="rounded bg-project-image bg-[url('/img_1.png')]"></div>
           <div class="flex flex-col gap-y-3 p-10">
             <h3
               class="text-base font-bold text-gray-custom-100 hover:text-green-cyan"
@@ -120,8 +133,6 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
                     shape-rendering="geometricPrecision"
                     text-rendering="geometricPrecision"
                     image-rendering="optimizeQuality"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
                     viewBox="0 0 640 640"
                     class="fill-gray-custom-300 hover:fill-green-cyan hover:animate-pulse"
                   >
@@ -135,8 +146,10 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
           </div>
         </div>
         <div class="hidden md:block w-full h-80 drop-shadow-xl relative">
-          <div class="rounded bg-project-image-backdrop-big"></div>
-          <div class="rounded bg-project-image-big bg-[url('/img.png')]"></div>
+          <div class="w-3/5 h-full rounded bg-project-image-backdrop-big"></div>
+          <div
+            class="w-3/5 h-full rounded bg-project-image-big bg-[url('/img_1.png')]"
+          ></div>
           <div class="flex flex-col gap-y-3 pt-3 absolute right-0 w-2/4">
             <h3
               class="text-base font-bold text-gray-custom-100 hover:text-green-cyan self-end"
@@ -171,8 +184,6 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
                     shape-rendering="geometricPrecision"
                     text-rendering="geometricPrecision"
                     image-rendering="optimizeQuality"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
                     viewBox="0 0 640 640"
                     class="fill-gray-custom-300 hover:fill-green-cyan hover:animate-pulse"
                   >
@@ -248,8 +259,6 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  width: 60%;
-  height: 20rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -269,23 +278,35 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
 .bg-project-image-backdrop-big {
   cursor: pointer;
   background-color: #0affb1;
-  width: 60%;
-  height: 20rem;
+  background-repeat: no-repeat;
+  object-fit: cover;
   position: absolute;
   z-index: -1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .bg-project-image-backdrop-big:hover {
-  /*display: none;*/
   opacity: 0;
 }
 
 .custom-box-shadow {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .custom-box-shadow:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 10px 20px;
+}
+
+.list-styled:before {
+  content: "";
+  border-color: transparent #64ffda;
+  border-style: solid;
+  border-width: 0.25em 0 0.25em 0.35em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
 }
 </style>
