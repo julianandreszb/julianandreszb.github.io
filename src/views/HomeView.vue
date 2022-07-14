@@ -40,15 +40,12 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
         </p>
       </div>
       <div class="mt-10" data-test="farewell">
-        <p class="text-xl text-gray-custom-400 leading-relaxed sm:text-2xl">
-          Please check out my
-          <a href="#portfolio">
-            <span class="text-green-cyan border-b-green-cyan cursor-pointer"
-              >Portfolio</span
-            >
-          </a>
-          to see what I've built
-        </p>
+        <a
+          class="text-xl leading-relaxed sm:text-base py-3 px-6 border-solid border border-green-cyan rounded text-green-cyan"
+          href="#portfolio"
+        >
+          Check out my portfolio
+        </a>
       </div>
     </div>
     <!-- End about me section -->
@@ -56,9 +53,9 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
     <!-- Begin contact section -->
     <div
       id="aboutMe"
-      class="h-screen bg-dark-blue pt-28 flex flex-col gap-y-10"
+      class="h-screen bg-dark-blue pt-28 flex flex-col lg:flex-row gap-y-10"
     >
-      <div>
+      <div class="lg:w-1/2">
         <h1 class="text-2xl font-bold text-gray-custom-100 mb-10">
           <span class="text-green-cyan font-light text-xl">01.</span> About me
         </h1>
@@ -74,25 +71,28 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
         </p>
         <div class="flex gap-x-10">
           <ul class="text-gray-custom-400">
-            <li class="ml-5 list-styled">PHP (Zend 1.7 & Laravel)</li>
             <li class="ml-5 list-styled">JavaScript (ES6+)</li>
-            <li class="ml-5 list-styled">MySQL</li>
+            <li class="ml-5 list-styled">CSS3 & Tailwind CSS</li>
+            <li class="ml-5 list-styled">VueJS</li>
           </ul>
           <ul class="text-gray-custom-400">
-            <li class="ml-5 list-styled">CSS3 & Tailwind CSS</li>
-            <li class="ml-5 list-styled">JavaScript (ES6+)</li>
-            <li class="ml-5 list-styled">VueJS</li>
+            <li class="ml-5 list-styled">PHP (Zend 1.7 & Laravel)</li>
+            <li class="ml-5 list-styled">MySQL</li>
           </ul>
         </div>
       </div>
-      <div class="flex justify-center relative">
-        <img class="rounded h-3/6 bg-white" src="/profile-2.png" alt="" />
+      <div class="ml-4 lg:w-1/2 flex justify-center relative gap-x-5">
+        <img
+          class="border-solid border-2 border-green-cyan rounded h-3/6 bg-dark-blue"
+          src="/profile-2.png"
+          alt=""
+        />
       </div>
     </div>
     <!-- End contact section -->
 
     <!-- Begin portfolio section -->
-    <div id="portfolio" class="bg-dark-blue pt-28">
+    <div id="portfolio" class="h-screen bg-dark-blue pt-28">
       <h1 class="text-2xl font-bold text-gray-custom-100 mb-10">
         <span class="text-green-cyan font-light text-xl">02.</span> Portfolio
       </h1>
@@ -201,8 +201,11 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
     <!-- End portfolio section -->
 
     <!-- Begin contact section -->
-    <div id="contact" class="h-screen bg-dark-blue pt-28">
-      <h1 class="text-2xl font-bold text-gray-custom-100 mb-10">
+    <div
+      id="contact"
+      class="h-screen bg-dark-blue pt-28 flex flex-col items-center"
+    >
+      <h1 class="text-2xl font-bold text-gray-custom-100 mb-5">
         <span class="text-green-cyan font-light text-xl">03.</span> Contact
       </h1>
       <p class="text-gray-custom-400 mb-5">
@@ -210,16 +213,19 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
         possible
       </p>
       <a
-        class="text-gray-custom-400 hover:text-green-cyan tracking-widest hover:animate-pulse"
+        class="text-xl leading-relaxed sm:text-base py-3 px-6 border-solid border border-green-cyan rounded text-green-cyan hover:animate-pulse"
         href="mailto:JulianAndresZB@gmail.com"
         >Mail me!</a
       >
     </div>
     <!-- End contact section -->
 
-    <div id="contact" class="h-screen bg-dark-blue pt-28">
-      <h1 class="text-3xl text-gray-custom-400">Credits</h1>
-      <p class="text-gray-custom-400">
+    <div
+      id="contact"
+      class="h-screen bg-dark-blue pt-28 flex flex-col items-center"
+    >
+      <h1 class="text-2xl font-bold text-gray-custom-100 mb-5">Credits</h1>
+      <p class="text-gray-custom-400 text-center">
         This site was fully based on
         <a
           class="text-green-cyan"
@@ -227,15 +233,15 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
           href="https://brittanychiang.com/"
           >Brittany Chiang</a
         >
-        page. All credits of this design to Brittany Chiang. Please visit her
-        github
+        page design.<br />
+        All credits to her &#x2764;. <br /><br />Please visit her
         <a
           class="text-green-cyan"
           target="_blank"
-          href="https://github.com/bchiang7/v4"
-          >profile</a
+          href="https://github.com/bchiang7"
+          >GitHub</a
         >
-        too.
+        profile too.
       </p>
     </div>
   </div>
