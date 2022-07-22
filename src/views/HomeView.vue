@@ -263,7 +263,7 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
 .bg-project-image-big {
   cursor: pointer;
   background-position: center;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   object-fit: cover;
   position: absolute;
   top: 0;
