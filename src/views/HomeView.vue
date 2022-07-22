@@ -29,12 +29,12 @@ const totalWebDevelopmentExperience = currentYear - experienceStartDateYear;
           I'm passionate about learning and improving every day. Currently, I’m
           focused on getting a master in
           <span
-            class="text-lg font-bold bg-yellow-300 text-black rounded-md px-1 pt-0.5"
+            class="text-dark-blue text-lg font-bold bg-yellow-300 rounded-md px-1 pt-0.5"
             >JavaScript</span
           >
           and
           <span
-            class="text-lg font-bold bg-green-400 text-black rounded-md px-1 pt-0.5"
+            class="!text-dark-blue text-lg font-bold bg-green-400 rounded-md px-1 pt-0.5"
             >VueJS</span
           >.
         </p>
