@@ -90,14 +90,14 @@ const state = reactive({
                 <div class="font-weight-bold">
                   <strong>{{ message.from }}</strong>
                 </div>
-                <div class="font-weight-light">
+                <div class="font-weight-light text-medium-emphasis">
                   <strong>{{ message.time }}</strong>
                 </div>
                 <div v-if="false" >
                   <p class="text-experience-description my-3 timeline-text font-weight-light">{{ message.message }}</p>
                 </div>
                 <div>
-                  <v-chip v-for="badge in message.badges " :color="badge.color" class="ma-2">{{ badge.name }}</v-chip>
+                  <v-chip v-for="badge in message.badges " :color="badge.color" class="ma-2 font-weight-bold">{{ badge.name }}</v-chip>
                 </div>
               </div>
             </v-timeline-item>
