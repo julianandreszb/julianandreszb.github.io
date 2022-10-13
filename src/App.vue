@@ -1,6 +1,8 @@
 <script setup>
-import Experience from './components/Experience.vue'
 import About from './components/About.vue'
+import Experience from './components/Experience.vue'
+import Portfolio from './components/Portfolio.vue'
+import Contact from './components/Contact.vue'
 import {computed, reactive} from "vue";
 import {useDisplay} from "vuetify";
 
@@ -13,13 +15,13 @@ const width = computed(() => {
     case 'sm':
       return '80vw'
     case 'md':
-      return '70vw'
-    case 'lg':
       return '65vw'
+    case 'lg':
+      return '45vw'
     case 'xl':
-      return 800
+      return '45vw'
     case 'xxl':
-      return 800
+      return '45fw'
   }
 })
 
@@ -47,6 +49,8 @@ const props = reactive({
       <v-responsive :width="width" class="mx-auto">
         <About/>
         <Experience :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <Portfolio :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <Contact :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
       </v-responsive>
     </v-main>
   </v-app>

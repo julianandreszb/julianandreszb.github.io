@@ -6,40 +6,40 @@ const state = reactive({
   experiences: [
     {
       from: 'LIFEFILE LLC',
-      message: `Create: PHP modules and user interfaces in VueJS. Mobile applications using
-        Phonegap (Cordova). APIs using Laravel + OpenAPI Specification`,
+      message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs. Integrate with QuickBooks Desktop and QuickBooks Online.
+      Create mobile applications using Phonegap (Cordova). Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
       time: 'Feb 2013 - Present',
       color: 'green',
 
       badges: [
-        {name: "Zend" },
-        {name: "Laravel", color: "red" },
-        {name: "VueJS", color: "green" },
-        {name: "MySQL", color: "blue" },
-        {name: "Phonegap (Cordova)" },
+        {name: "Zend"},
+        {name: "Laravel", color: "red"},
+        {name: "VueJS", color: "green"},
+        {name: "MySQL", color: "blue"},
+        {name: "Phonegap (Cordova)"},
       ]
     },
     {
       from: 'ONLY-ONE',
-      message: 'Website maintenance OnlyOne and creating new modules',
+      message: 'OnlyOne website maintenance. Create new modules.',
       time: 'January 2015 - April 2015',
       color: 'green',
 
       badges: [
-        {name: "Zend" },
-        {name: "MySQL", color: "blue" },
-        {name: "Bootstrap", color: "primary" },
+        {name: "Zend"},
+        {name: "MySQL", color: "blue"},
+        {name: "Bootstrap", color: "primary"},
       ]
     },
     {
       from: 'FREELANCE DEVELOPER',
-      message: 'Create "PAE" (School feeding program) application using the Symfony 2 + bootstrap',
+      message: 'Create "PAE" (School feeding program) application using the Symfony 2 framework + bootstrap.',
       time: 'Aug 2012 - Dec 2012',
       color: 'green',
       badges: [
-        {name: "Symfony 2" },
-        {name: "MySQL", color: "blue" },
-        {name: "Bootstrap", color: "primary" },
+        {name: "Symfony 2"},
+        {name: "MySQL", color: "blue"},
+        {name: "Bootstrap", color: "primary"},
       ]
     },
   ],
@@ -79,7 +79,6 @@ const state = reactive({
 
           <v-timeline
               density="compact"
-              truncate-line="none"
           >
             <v-timeline-item
                 v-for="message in state.experiences"
@@ -94,7 +93,9 @@ const state = reactive({
                 <div class="font-weight-light">
                   <strong>{{ message.time }}</strong>
                 </div>
-                <!--                <div >{{ message.message }}</div>-->
+                <div>
+                  <p class="text-experience-description my-3">{{ message.message }}</p>
+                </div>
                 <div>
                   <v-chip v-for="badge in message.badges " :color="badge.color" class="ma-2">{{ badge.name }}</v-chip>
                 </div>
@@ -108,5 +109,7 @@ const state = reactive({
 </template>
 
 <style scoped>
-
+.text-experience-description {
+  max-width: 60ch;
+}
 </style>
