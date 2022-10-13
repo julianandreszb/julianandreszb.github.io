@@ -50,7 +50,7 @@ const state = reactive({
 <template>
   <v-container>
     <v-row justify="space-around">
-      <v-card width="100%">
+      <v-card width="100%"  >
         <v-img
             height="200"
             src="https://media.istockphoto.com/photos/close-up-of-a-professional-office-specialist-working-on-desktop-in-picture-id1316574146?k=20&m=1316574146&s=612x612&w=0&h=_mhEkg8Sqz_fENUzmaE4IYtyT8_utoP9476-IECwyZo="
@@ -87,14 +87,14 @@ const state = reactive({
                 size="x-small"
             >
               <div class="mb-4">
-                <div class="font-weight-medium">
+                <div class="font-weight-bold">
                   <strong>{{ message.from }}</strong>
                 </div>
                 <div class="font-weight-light">
                   <strong>{{ message.time }}</strong>
                 </div>
-                <div>
-                  <p class="text-experience-description my-3">{{ message.message }}</p>
+                <div v-if="false" >
+                  <p class="text-experience-description my-3 timeline-text font-weight-light">{{ message.message }}</p>
                 </div>
                 <div>
                   <v-chip v-for="badge in message.badges " :color="badge.color" class="ma-2">{{ badge.name }}</v-chip>
@@ -111,5 +111,8 @@ const state = reactive({
 <style scoped>
 .text-experience-description {
   max-width: 60ch;
+}
+.timeline-text {
+  font-size: 1.25rem;
 }
 </style>
