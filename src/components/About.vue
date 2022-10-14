@@ -83,7 +83,7 @@ const state = reactive({
   /*background-image: linear-gradient(180deg, #000000 0%, #00ffb0 100%);*/
 
   background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-image: linear-gradient(43deg, #4158D0 0%, #50b2c8 46%, #FFCC70 100%);
 
 
   filter: saturate(1.5);

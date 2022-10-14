@@ -1,4 +1,5 @@
 <script setup>
+import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
 import Experience from './components/Experience.vue'
 import Portfolio from './components/Portfolio.vue'
@@ -24,34 +25,28 @@ const width = computed(() => {
       return '45fw'
   }
 })
-
-const props = reactive({
-  links: [
-    'about me',
-    'experience',
-    'portfolio',
-    'contact',
-  ],
-});
 </script>
 
 <template>
   <v-app>
-    <v-app-bar density="compact">
-      <template v-slot:prepend>
-        <v-app-bar-nav-icon class="d-flex d-md-none"></v-app-bar-nav-icon>
-      </template>
-      <v-btn class="d-none d-md-flex" v-for="link in props.links" :key="link" text>
-        {{ link }}
-      </v-btn>
-    </v-app-bar>
+    <Navbar/>
     <v-main>
       <v-responsive :width="width" class="mx-auto">
+        <div id="about"></div>
         <About/>
+        <div id="experience"></div>
         <Experience :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <div id="portfolio"></div>
         <Portfolio :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
-        <Contact :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <div id="contact"></div>
+        <Contact class="h-screen" :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
       </v-responsive>
     </v-main>
   </v-app>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
