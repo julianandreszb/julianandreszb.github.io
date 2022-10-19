@@ -16,8 +16,8 @@ watch(mdAndUp, (newMdAndUp) => {
 const props = reactive({
   links: [
     {label: "about me", href: "about"},
-    {label: "experience", href: "experience"},
     {label: "portfolio", href: "portfolio"},
+    {label: "experience", href: "experience"},
     {label: "contact", href: "contact"},
   ],
 });

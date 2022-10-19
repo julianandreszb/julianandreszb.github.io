@@ -59,16 +59,16 @@ const state = reactive({
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-avatar class="gradient-profile-logo" :image="state.profileLogo" size="250"></v-avatar>
+        <v-avatar class="gradient-profile-logo" :image="state.profileLogo" size="150"></v-avatar>
       </v-col>
       <v-col cols="12" class="mb-4">
-        <h1 class=" text-h2">
+        <h1 class="text-h2 font-weight-black">
           Julian Zapata
         </h1>
         <h2 class="font-weight-light text-medium-emphasis letter-spacing-x3">Full-Stack Web Developer</h2>
       </v-col>
       <v-col cols="12" class="mb-4 text-left">
-        <p class="font-weight-light profile-text-description">
+        <p class="font-weight-light profile-text-description text-medium-emphasis">
           Passionate for learning. I've worked as back-end developer for more than 9 years already. I’m moving to the
           front-end environment and focusing on getting an advanced level in JavaScript, HTML, CSS, and VueJS.
         </p>

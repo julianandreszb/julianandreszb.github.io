@@ -24,7 +24,10 @@ const width = computed(() => {
     case 'xxl':
       return '45fw'
   }
-})
+});
+
+const sectionSpacer = reactive({'mt-10': mdAndUp, 'mt-5': !mdAndUp});
+
 </script>
 
 <template>
@@ -34,12 +37,12 @@ const width = computed(() => {
       <v-responsive :width="width" class="mx-auto">
         <div id="about"></div>
         <About/>
-        <div id="experience"></div>
-        <Experience :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
         <div id="portfolio"></div>
-        <Portfolio :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <Portfolio :class="sectionSpacer"/>
+        <div id="experience"></div>
+        <Experience :class="sectionSpacer"/>
         <div id="contact"></div>
-        <Contact class="h-screen" :class="mdAndUp ? 'mt-10' : 'mt-5'"/>
+        <Contact class="h-screen" :class="sectionSpacer"/>
       </v-responsive>
     </v-main>
   </v-app>
