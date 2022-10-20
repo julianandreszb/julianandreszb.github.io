@@ -62,10 +62,10 @@ const state = reactive({
         <v-avatar class="gradient-profile-logo" :image="state.profileLogo" size="150"></v-avatar>
       </v-col>
       <v-col cols="12" class="mb-4">
-        <h1 class="text-h2 font-weight-black">
+        <h2 class="font-weight-light text-medium-emphasis letter-spacing-x3">
           Julian Zapata
-        </h1>
-        <h2 class="font-weight-light text-medium-emphasis letter-spacing-x3">Full-Stack Web Developer</h2>
+        </h2>
+        <h1 class="text-h4 font-weight-black">Full-Stack Web Developer</h1>
       </v-col>
       <v-col cols="12" class="mb-4 text-left">
         <p class="font-weight-light profile-text-description text-medium-emphasis">
@@ -79,13 +79,8 @@ const state = reactive({
 
 <style scoped>
 .gradient-profile-logo {
-  /*background-color: #000000;*/
-  /*background-image: linear-gradient(180deg, #000000 0%, #00ffb0 100%);*/
-
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #50b2c8 46%, #FFCC70 100%);
-
-
   filter: saturate(1.5);
 }
 

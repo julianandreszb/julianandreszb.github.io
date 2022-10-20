@@ -40,8 +40,10 @@ const state = reactive({
 
 <style scoped>
 .gradient-contact {
-  background: rgb(14,0,255);
-  background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(158,0,255,1) 100%);
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .contact-description-text {
