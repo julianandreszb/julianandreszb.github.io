@@ -17,7 +17,7 @@ const state = reactive({
         <span class="text-h6 font-weight-bold text-uppercase">Contact</span>
       </v-card-title>
 
-      <v-card-text class="mt-4 contact-description-text text-medium-emphasis">
+      <v-card-text class="mt-4 contact-description-text">
         Please feel free to send me an email. I'll try to reply to you as soon as possible.
       </v-card-text>
 
@@ -40,10 +40,8 @@ const state = reactive({
 
 <style scoped>
 .gradient-contact {
-  background: #2C3E50;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #50b2c8 50%, #0049ff 100%);
 }
 
 .contact-description-text {
