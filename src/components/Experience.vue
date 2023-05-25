@@ -6,8 +6,7 @@ const state = reactive({
   experiences: [
     {
       from: 'FREELANCE',
-      message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs. Integrate with QuickBooks Desktop and QuickBooks Online.
-      Create mobile applications using Phonegap (Cordova). Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
+      message: `Create Web applications from scratch (From the idea to implementation/release) using VueJS 3 (Composition API), TypeScript, RESTFUL APIs using NodeJS, MongoDB`,
       time: 'March 2019 - Present',
       color: 'green',
 
@@ -20,8 +19,8 @@ const state = reactive({
     },
     {
       from: 'LIFEFILE LLC',
-      message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs. Integrate with QuickBooks Desktop and QuickBooks Online.
-      Create mobile applications using Phonegap (Cordova). Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
+      message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs (QuickBooks Desktop, QuickBooks Online, EDI, Etc.).
+      Create mobile applications using Phonegap (Cordova). Create PWA applications. Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
       time: 'Feb 2013 - Present',
       color: 'green',
 
@@ -38,7 +37,7 @@ const state = reactive({
     },
     {
       from: 'ONLY-ONE',
-      message: 'OnlyOne website maintenance. Create new modules.',
+      message: 'OnlyOne website maintenance. Create new binary trees.',
       time: 'January 2015 - April 2015',
       color: 'green',
 
@@ -92,7 +91,7 @@ const state = reactive({
                 <div class="font-weight-light text-medium-emphasis">
                   <strong>{{ message.time }}</strong>
                 </div>
-                <div v-if="false" >
+                <div>
                   <p class="text-experience-description my-3 timeline-text font-weight-light">{{ message.message }}</p>
                 </div>
                 <div>
