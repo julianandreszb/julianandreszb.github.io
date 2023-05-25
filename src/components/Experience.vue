@@ -5,6 +5,19 @@ import {reactive} from "vue";
 const state = reactive({
   experiences: [
     {
+      from: 'FREELANCE',
+      message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs. Integrate with QuickBooks Desktop and QuickBooks Online.
+      Create mobile applications using Phonegap (Cordova). Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
+      time: 'March 2019 - Present',
+      color: 'green',
+
+      badges: [
+        {name: "Vue 3 (Composition API)", color: "green"},
+        {name: "NodeJS", color: "#006400"},
+        {name: "MongoDB", color: "#000000"},
+      ]
+    },
+    {
       from: 'LIFEFILE LLC',
       message: `Create CRUD modules in PHP & VueJS. Integrate with external systems|APIs. Integrate with QuickBooks Desktop and QuickBooks Online.
       Create mobile applications using Phonegap (Cordova). Migrate legacy modules from Zend to Laravel. Create the LifeFile's API using Laravel + OpenAPI Specification.`,
@@ -12,10 +25,11 @@ const state = reactive({
       color: 'green',
 
       badges: [
-        {name: "Zend"},
         {name: "Laravel", color: "red"},
-        {name: "VueJS", color: "green"},
+        {name: "Vue 2", color: "green"},
         {name: "MySQL", color: "blue"},
+        {name: "PWA"},
+        {name: "Zend"},
         {name: "Phonegap (Cordova)"},
       ]
     },
@@ -32,7 +46,7 @@ const state = reactive({
       ]
     },
     {
-      from: 'FREELANCE DEVELOPER',
+      from: 'FREELANCE',
       message: 'Create "PAE" (School feeding program) application using the Symfony 2 framework + bootstrap.',
       time: 'Aug 2012 - Dec 2012',
       color: 'green',
@@ -51,27 +65,9 @@ const state = reactive({
   <v-container>
     <v-row justify="space-around">
       <v-card width="100%"  >
-        <v-img
-            height="200"
-            src="https://media.istockphoto.com/photos/close-up-of-a-professional-office-specialist-working-on-desktop-in-picture-id1316574146?k=20&m=1316574146&s=612x612&w=0&h=_mhEkg8Sqz_fENUzmaE4IYtyT8_utoP9476-IECwyZo="
-            cover
-            class="text-white"
-        >
-          <v-layout full-height>
-            <v-app-bar
-                density="comfortable"
-                color="rgba(0, 0, 0, 0)"
-                flat
-                theme="dark"
-            >
-
-              <v-app-bar-title class="text-h6 font-weight-medium text-uppercase">
-                Experience
-              </v-app-bar-title>
-            </v-app-bar>
-          </v-layout>
-        </v-img>
-
+        <v-card-title class="text-h6 font-weight-medium text-uppercase">
+          Experience
+        </v-card-title>
         <v-card-text>
           <div class="font-weight-bold ml-1 mb-2">
             Today

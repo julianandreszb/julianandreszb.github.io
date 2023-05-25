@@ -3,7 +3,7 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 
-loadFonts()
+await loadFonts()
 
 createApp(App)
   .use(vuetify)
