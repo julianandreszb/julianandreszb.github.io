@@ -69,8 +69,9 @@ const state = reactive({
       </v-col>
       <v-col cols="12" class="mb-4 text-left">
         <p class="font-weight-light profile-text-description text-medium-emphasis">
-          Passionate for learning. I've worked as back-end developer for more than 9 years already. I’m moving to the
-          front-end environment and focusing on getting an advanced level in JavaScript, HTML, CSS, and VueJS.
+          Passionate about continuous learning. I've worked as Full-Stack web developer for more than 9 years already.
+          With a strong focus on honing my skills in <strong>Vue 3</strong>, <strong>TypeScript</strong>, <strong>NodeJS</strong>,
+          and <strong>CSS3 (SCSS)</strong>. Aiming to reach an advanced proficiency level.
         </p>
       </v-col>
     </v-row>

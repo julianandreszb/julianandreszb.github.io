@@ -16,8 +16,9 @@ watch(mdAndUp, (newMdAndUp) => {
 const props = reactive({
   links: [
     {label: "about me", href: "about"},
-    {label: "portfolio", href: "portfolio"},
+    {label: "skills", href: "skills"},
     {label: "experience", href: "experience"},
+    {label: "portfolio", href: "portfolio"},
     {label: "contact", href: "contact"},
   ],
 });
@@ -37,13 +38,11 @@ const props = reactive({
     <v-navigation-drawer
         v-model="drawer"
         bottom
-        temporary
+        :temporary="true"
     >
 
-      <v-list nav dense>
-        <v-list-item-group active-class="deep-purple--text text--accent-4">
+      <v-list :nav="true" dense>
           <v-list-item @click.stop="drawer = !drawer" class="text-uppercase" :href="`#${link.href}`" v-for="link in props.links" :key="link.href" >{{ link.label }}</v-list-item>
-        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
   </v-container>
