@@ -18,7 +18,6 @@ const props = reactive({
     {label: "about me", href: "about"},
     {label: "skills", href: "skills"},
     {label: "experience", href: "experience"},
-    {label: "about me", href: "about"},
     {label: "portfolio", href: "portfolio"},
     {label: "contact", href: "contact"},
   ],
@@ -39,10 +38,10 @@ const props = reactive({
     <v-navigation-drawer
         v-model="drawer"
         bottom
-        temporary
+        :temporary="true"
     >
 
-      <v-list nav dense>
+      <v-list :nav="true" dense>
           <v-list-item @click.stop="drawer = !drawer" class="text-uppercase" :href="`#${link.href}`" v-for="link in props.links" :key="link.href" >{{ link.label }}</v-list-item>
       </v-list>
     </v-navigation-drawer>

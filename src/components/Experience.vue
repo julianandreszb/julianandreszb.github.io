@@ -12,9 +12,10 @@ const state = reactive({
       color: 'green',
 
       badges: [
-        {name: "Vue 3 (Composition API)", color: "green"},
+        {name: "Vue ^3 (Composition API)", color: "green"},
         {name: "NodeJS", color: "#006400"},
         {name: "MongoDB", color: "#000000"},
+        {name: "Vuetify", color: "#1867c0"},
       ]
     },
     {
@@ -26,10 +27,12 @@ const state = reactive({
 
       badges: [
         {name: "Laravel", color: "red"},
-        {name: "Vue 2", color: "green"},
+        {name: "Vue ^2.7", color: "green"},
         {name: "MySQL", color: "blue"},
+        {name: "Git", color: "#e84d31"},
         {name: "PWA"},
         {name: "Zend"},
+        {name: "Subversion", color: "#7c97c3"},
         {name: "Phonegap (Cordova)"},
       ]
     },
@@ -42,7 +45,7 @@ const state = reactive({
       badges: [
         {name: "Zend"},
         {name: "MySQL", color: "blue"},
-        {name: "Bootstrap", color: "primary"},
+        {name: "Bootstrap ^3", color: "primary"},
       ]
     },
     {
@@ -53,7 +56,7 @@ const state = reactive({
       badges: [
         {name: "Symfony 2"},
         {name: "MySQL", color: "blue"},
-        {name: "Bootstrap", color: "primary"},
+        {name: "Bootstrap ^2", color: "primary"},
       ]
     },
   ],
